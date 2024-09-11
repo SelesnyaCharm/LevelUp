@@ -1,0 +1,20 @@
+Console.WriteLine("*** Hola jugador! Bienvenido al cálculo de niveles según tu experiencia acumulada ***")
+
+void PlayerLevelUp()
+{
+    Console.WriteLine(Ingresa tu experiencia actual ( recuerda ingresar números enteros):");
+
+    int playerExp = int.Parse(Console.ReadLine());
+
+    int levelUp = 0;
+
+    while (playerExp >= 100)
+    {
+        playerExp -= 100;
+        levelUp++;
+    }
+
+    Console.WriteLine("*** Felicidades! Ganaste " + levelUp + " nivel/es y te quedan " + playerExp + " puntos de experiencia. ***");
+}
+
+PlayerLevelUp();
